@@ -41,3 +41,8 @@ Migrations:
 
      p3 m.py sqlmigrate polls 0001
      python manage.py shell - add fields in DB manual
+
+JET:
+    https://pypi.org/project/django-3-jet/
+    Doc: https://docs.djangoproject.com/en/3.2/intro/tutorial07/
+    python manage.py migrate jet
