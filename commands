@@ -45,3 +45,8 @@ JET:
     https://pypi.org/project/django-3-jet/
     Doc: https://docs.djangoproject.com/en/3.2/intro/tutorial07/
     python manage.py migrate jet
+
+
+Lesson 6
+https://docs.djangoproject.com/en/3.2/intro/tutorial03/
+https://www.django-rest-framework.org/tutorial/quickstart/
