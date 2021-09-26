@@ -1,4 +1,3 @@
-python3 manage.py runserver
 PYTHONPATH=. pytest
 pip3 install -r requirements.txt
 
@@ -8,7 +7,7 @@ pip install -r requirements.txt (package install)
 pip freeze > requirements.txt  (add packages to requirements.txt)
 
 Start local server:
-    python message_persistence_service.py runserver
+    python3 manage.py runserver
 
 Start test:
     pytest test_main.py -s
