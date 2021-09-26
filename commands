@@ -49,4 +49,19 @@ JET:
 
 Lesson 6
 https://docs.djangoproject.com/en/3.2/intro/tutorial03/
-https://www.django-rest-framework.org/tutorial/quickstart/
+
+Rest
+
+    Install 'rest_framework':
+        pip install djangorestframework
+        pip install markdown       # Markdown support for the browsable API.
+        pip install django-filter  # Filtering support
+
+        http://127.0.0.1:8000/polls/question/
+
+             python3 manage.py makemigrations polls
+             python3 manage.py migrate
+
+        https://www.django-rest-framework.org/tutorial/quickstart/
+        https://www.django-rest-framework.org/api-guide/generic-views/#generic-views
+        https://www.django-rest-framework.org/tutorial/1-serialization/
