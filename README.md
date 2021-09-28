@@ -12,5 +12,9 @@ Learning the Django framework
 ### Start
     python3 manage.py runserver
 
+http://127.0.0.1:8000/ - View
+
+http://127.0.0.1:8000/admin  - Admin
+
 
 *For additional info please see commands.txt

@@ -1,20 +1,31 @@
 from django.contrib import admin
 
-from .models import Question
-
-
-class ChooseAdmin(admin.ModelAdmin):
-    raw_id_fields = ['question']
-
-
-class QuestionAdmin(admin.ModelAdmin):
-    ordering = ['date_created']
-    search_fields = ['question_text']
+from .models import Question, Choice
 
 
 class ChoiceAdmin(admin.ModelAdmin):
-    autocomplete_fields = ['question']
+    raw_id_fields = ['question']
 
 
-# admin.site.register(Question, ChooseAdmin)
-admin.site.register(Question)
+admin.site.register(Choice, ChoiceAdmin)
+
+
+class ChoiceInline(admin.TabularInline):
+    model = Choice
+    extra = 0
+
+
+class QuestionAdmin(admin.ModelAdmin):
+    search_fields = ['question_text']
+    date_hierarchy = 'pub_date'
+    fieldsets = [
+        (None, {'fields': ['question_text', 'description']}),
+        ('Date information', {'fields': ['pub_date']}),
+    ]
+    list_display = ('question_text', 'pub_date', 'was_published_recently')
+    list_filter = ['pub_date']
+    inlines = [ChoiceInline]
+
+
+admin.site.register(Question, QuestionAdmin)
+

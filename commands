@@ -1,16 +1,19 @@
-PYTHONPATH=. pytest
-pip3 install -r requirements.txt
+Ubuntu:
+-Install pip3:
+    sudo apt-get update
+    sudo apt-get -y install python3-pip
+-Install Django:
+    sudo pip3 install django==3.2
 
-pip freeze (ls)
-pip install socketio (i)
-pip install -r requirements.txt (package install)
-pip freeze > requirements.txt  (add packages to requirements.txt)
+pip3 install -r requirements.txt (package install)
+
+-DB:
+    python3 manage.py migrate
+    python3 manage.py migrate jet
+    python3 manage.py createsuperuser (Ex: max max@max.com 1106)
 
 Start local server:
     python3 manage.py runserver
-
-Start test:
-    pytest test_main.py -s
 
 DB:
     from app import db
@@ -41,10 +44,15 @@ Migrations:
      p3 m.py sqlmigrate polls 0001
      python manage.py shell - add fields in DB manual
 
+
+
+Start test:
+    pytest test_main.py -s
+
 JET:
     https://pypi.org/project/django-3-jet/
     Doc: https://docs.djangoproject.com/en/3.2/intro/tutorial07/
-    python manage.py migrate jet
+    python3 manage.py migrate jet
 
 
 Lesson 6
