@@ -22,7 +22,8 @@ from polls import views
 
 urlpatterns = [
     path('jet/', include('jet.urls', 'jet')),  # Django JET URLS
-    path('', views.index, name='index'),
+    # path('', views.index, name='index'),
+    path('', include('auth0login.urls')),
     path('admin/', admin.site.urls),
     path('polls/', include('polls.urls')),
 ]
