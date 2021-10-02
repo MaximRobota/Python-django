@@ -73,3 +73,5 @@ Rest
         https://www.django-rest-framework.org/tutorial/quickstart/
         https://www.django-rest-framework.org/api-guide/generic-views/#generic-views
         https://www.django-rest-framework.org/tutorial/1-serialization/
+
+pip install social-auth-app-django
